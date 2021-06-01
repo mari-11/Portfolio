@@ -1,7 +1,9 @@
 :root {
-  --primary-color: #e6e4d7;
-  --secondary-color: #024e76;
-  --tertiary-color: #2f4346;
+  --primary-color:  #b8c9cc;
+
+  /* adds color of the letters after hovering w/ cursor */
+  --secondary-color: #2b2020;
+  --tertiary-color: #204046;
 }
 
 * {
@@ -13,6 +15,21 @@
 body {
   color: var(--tertiary-color);
   font-family: Helvetica, Arial, sans-serif;
+}
+/* picture */
+#my-image {
+
+  width: 50%;
+  margin: 1px auto;
+  display: block;
+}
+/* below creates a hero image and makes my photo slide */
+.hero {
+  background-image: url('./images/brick-wall.jpg');
+  height: 600px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
 /* HEADER / NAV BAR STYLES START */
@@ -26,19 +43,21 @@ header {
   position: sticky;
   position: -webkit-sticky;
   top: 0;
-  background-image: url("../images/PROFILE.pg.jpgS");
+  /* Nav bar background-image below */
+  background-image: url("../images/brick-wall.jpg");
   background-size: cover;
   background-attachment: fixed;
   background-position: 80%;
   z-index: 9999;
 }
-
+/* Maribel */
 header h1 {
   font-weight: bold;
   margin: 0;
   font-size: 36px;
   color: var(--primary-color);
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-shadow: 0 0 10px #dfcbe2;
 }
 
 header a {
@@ -107,7 +126,7 @@ section {
 
 /* HERO STYLES START */
 .hero {
-  background-image: url("../images/hero-bg.jpg");
+  background-image: url("../images/brick-wall.jpg");
   background-size: cover;
   display: flex;
   justify-content: center;
@@ -117,13 +136,15 @@ section {
   background-position: 80%;
 }
 
+  
 .hero-cta {
   width: 35%;
   text-align: right;
   margin: 3.5%;
-  color: #fff;
+  color: #28c0c0 ;
   font-size: 18px;
   line-height: 1.2;
+
 }
 
 .hero-cta h2 {
@@ -142,6 +163,7 @@ section {
   margin: 3.5%;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
 }
 
 .hero-form button:hover {
@@ -165,11 +187,11 @@ section {
   width: 100%;
   margin-bottom: 15px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(27, 165, 48, 0.75);
 }
 
 .form-input:focus {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(100, 228, 15);
   outline: none;
 }
 
@@ -204,7 +226,7 @@ section {
   content: "";
   height: 20px;
   width: 20px;
-  background: rgba(255, 255, 255, 0.75);
+  background: rgba(212, 17, 17, 0.75);
   border: 1px solid var(--secondary-color);
   position: absolute;
   top: -4px;
@@ -309,6 +331,7 @@ section {
   font-size: 46px;
   flex: 1 30%;
 }
+
 
 .step-info {
   flex: 2 70%;
@@ -434,12 +457,12 @@ section {
   margin-bottom: 15px;
   margin-top: 5px;
   border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgba(116, 13, 13, 0.75);
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgb(228, 65, 65);
   outline: none;
 }
 
@@ -591,4 +614,30 @@ section {
   .contact-form {
     order: 3;
   }
+}
+
+header nav {
+  margin: 7px 0;
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  padding: 10px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw;
+  text-shadow: 0 0 10px #f6e9f8;
+}
+
+header nav ul li a:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 15px;
+  text-shadow: none;
 }
